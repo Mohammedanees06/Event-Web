@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*::selection {
+    color: #fff;
+    background-color: #000;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    color: #333;
+}
+
+/* Header styling with responsive adjustments */
+header {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color:#08C2FF;
+    color: #F5F5F7;
+    height: 70px;
+    transition: height 0.4s ease, border 0.3s ease;
+}
+
+.logo img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: height 0.3s ease, width 0.3s ease;
+}
+header .college-info {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.2;
+    padding: 5px;
+    margin-right: 54%;
+    
+}
+
+.shrink .logo img {
+    height: 40px;
+    width: 40px;
+}
+
+/* Navigation styling for larger screens */
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #ffcc00;
+}
+
+
+/* Hide navigation links on screens 768px and smaller */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+}
+
+/* Home page styling */
+#home {
+    background-image: url('images/bg.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: black;
+}
+
+#home h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+#home p {
+    font-size: 1.5em;
+}
+
+/* Events section styling */
+#events {
+    margin-top: 40px;
+    background-color: white;
+    padding: 20px;
+}
+
+#events h2 {
+    text-align: center;
+    font-size: 45px;
+    color: #FF6500;
+}
+
+.event-boxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    padding: 60px;
+}
+
+.event-box {
+    height: 250px;
+    width: 75%;
+    margin-left: 80px;
+    background-color: #ffcc00;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 18px;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Individual background images for each event box */
+.event-boxes a:nth-child(1) {
+    background-image: url('images/trhunt.png');
+}
+.event-boxes a:nth-child(2) {
+    background-image: url('images/pubg.jpg');
+}
+.event-boxes a:nth-child(3) {
+    background-image: url('images/dec.jpg');
+}
+.event-boxes a:nth-child(4) {
+    background-image: url('images/web.jpg');
+}
+.event-boxes a:nth-child(5) {
+    background-image: url('images/sing.jpg');
+}
+.event-boxes a:nth-child(6) {
+    background-image: url('images/circ.jpg');
+}
+
+.event-box:hover {
+    transform: scale(1.05);
+}
+
+.event-name {
+   margin-bottom:-30px;
+    /* Space between event box and name */
+    font-size: 20px; /* Adjust font size if needed */
+    color: #333; /* Adjust text color if needed */
+}
+
+
+/* Contact section styling */
+#contact {
+    height: 470px;
+    background-color: #F5F5F7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 150px;
+}
+
+#contact h2 {
+    font-size: 36px;
+    color: #2E073F;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 20px;
+    color: #2E073F;
+    margin-bottom: 30px;
+}
+
+.contact-link {
+    display: inline-block;
+    background-color: #5da8f3;
+    color: #2E073F;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.contact-link:hover {
+    background-color: #449cf5;
+}
+
+/* Footer styles */
+footer {
+    height: 80px;
+    text-align: center;
+    justify-content: center;
+    padding: 15px;
+    background-color: #5da8f3;
+    color: white;
+    font-size: 1em;
+}
+
+footer p {
+    margin: 0;
+    margin-top: 15px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    header .college-info {
+        font-size: 18px;
+        margin-right: 10px;
+    }
+
+    .event-boxes {
+        grid-template-columns: 1fr;
+        margin-right: 80px;
+      
+
+    }
+
+    #home h1 {
+        font-size: 2em;
+    }
+
+    #home p {
+        font-size: 1.2em;
+    }
+
+    .contact-link {
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .college-info {
+        font-size: 16px;
+        margin-right: 5px;
+    }
+
+    #home h1 {
+        font-size: 1.8em;
+    }
+
+    #home p {
+        font-size: 1em;
+    }
+
+    #contact h2 {
+        font-size: 28px;
+    }
+
+    #contact p {
+        font-size: 16px;
+    }
+
+    .contact-link {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+}
